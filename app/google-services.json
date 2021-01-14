@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "748182683683",
+    "project_id": "chata6-ebfc1",
+    "storage_bucket": "chata6-ebfc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748182683683:android:4e2353e0e47b7f36f57196",
+        "android_client_info": {
+          "package_name": "com.example.chata6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748182683683-j90j5og9aj0veb7qhgp71qhi55k5rv2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrI_5gPiXU4Yhr_EbPk3-kh4ilH1ik2L4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748182683683-j90j5og9aj0veb7qhgp71qhi55k5rv2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

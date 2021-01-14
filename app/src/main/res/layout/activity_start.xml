@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AB17588E"
+    tools:context=".SignIn.StartActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="166dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="122dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="154dp"
+        android:gravity="center"
+        android:text="Chat app "
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/log_in_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="266dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:background="#2196F3"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/create_ac_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/log_in_id"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="33dp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="10dp"
+        android:background="#2196F3"
+        android:text="Register"
+        android:textAllCaps="false" />
+
+
+</RelativeLayout>
