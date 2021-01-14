@@ -96,6 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
                      hashMap.put("id", userId);
                      hashMap.put("name", name);
                      hashMap.put("imageURL", "default");
+                     hashMap.put("search", name.toLowerCase());
 
 
                      reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {

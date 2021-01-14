@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -68,7 +69,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
     public  class  ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView textName;
-        public CircleImageView profileImageView;
+        public ImageView profileImageView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
