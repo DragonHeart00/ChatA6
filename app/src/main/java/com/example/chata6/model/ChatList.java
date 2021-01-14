@@ -7,6 +7,9 @@ public class ChatList {
         this.id = id;
     }
 
+    public ChatList() {
+    }
+
     public String getId() {
         return id;
     }

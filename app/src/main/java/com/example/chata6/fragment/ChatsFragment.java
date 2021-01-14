@@ -63,7 +63,7 @@ public class ChatsFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 chatLists.clear();
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    ChatList chats = snapshot.getValue(ChatList.class);
+                    ChatList chats = dataSnapshot.getValue(ChatList.class);
                     chatLists.add(chats);
 
                 }
@@ -90,8 +90,9 @@ public class ChatsFragment extends Fragment {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                mUsers.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    User user = snapshot.getValue(User.class);
+                    User user = dataSnapshot.getValue(User.class);
                     for (ChatList chatList1 : chatLists){
                         if (user.getId().equals(chatList1.getId())){
                             mUsers.add(user);
@@ -110,45 +111,4 @@ public class ChatsFragment extends Fragment {
     }
 
 
-//    private void readChat() {
-//        mUsers = new ArrayList<>();
-//        reference = FirebaseDatabase.getInstance().getReference("Users");
-//        reference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                mUsers.clear();
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-//                    User user = dataSnapshot.getValue(User.class);
-//
-//
-//                     //display 1 user from chats
-//                        for (String id : userList){
-//                            if (user.getId().equals(id)){
-//                                if (mUsers.size() != 0 ){
-//                                    for (User user1 : mUsers){
-//                                        if (!user.getId().equals(user1.getId())){
-//                                            mUsers.add(user);
-//                                        }
-//                                    }
-//                                }else {
-//                                    mUsers.add(user);
-//                                }
-//                            }
-//                        }
-//                }
-//
-//                userAdapter = new UserAdapter(getContext(), mUsers);
-//                recyclerView.setAdapter(userAdapter);
-//
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//
-//
-//    }
 }
