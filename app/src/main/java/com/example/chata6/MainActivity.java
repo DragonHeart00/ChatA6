@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.chata6.SignIn.StartActivity;
 import com.example.chata6.controller.ViewPagerAdapter;
+import com.example.chata6.fragment.AllUserFragment;
 import com.example.chata6.fragment.ChatsFragment;
 import com.example.chata6.fragment.ProfileFragment;
 import com.example.chata6.fragment.UserFragment;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPagerAdapter.addFragment(new ChatsFragment(), "Chat");
         mViewPagerAdapter.addFragment(new UserFragment(), "Friends");
         mViewPagerAdapter.addFragment(new ProfileFragment(), "Profile");
+        mViewPagerAdapter.addFragment(new AllUserFragment(), "All User");
 
         viewPager.setAdapter(mViewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_baseline_chat_24);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_baseline_people_24);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_baseline_account_box_24);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_baseline_people_24);
 
     }
 
