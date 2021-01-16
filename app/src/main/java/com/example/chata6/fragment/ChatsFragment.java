@@ -1,6 +1,7 @@
 package com.example.chata6.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,13 +58,14 @@ public class ChatsFragment extends Fragment {
 
         chatLists = new ArrayList<>();
 
-        reference = FirebaseDatabase.getInstance().getReference("ChatList").child(firebaseUser.getUid());
+        reference = FirebaseDatabase.getInstance().getReference("ChatList").child(firebaseUser.getUid());//
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 chatLists.clear();
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
                     ChatList chats = dataSnapshot.getValue(ChatList.class);
+                    Log.d("ASE", dataSnapshot.getKey().toString());
                     chatLists.add(chats);
 
                 }
@@ -96,6 +98,7 @@ public class ChatsFragment extends Fragment {
                     for (ChatList chatList1 : chatLists){
                         if (user.getId().equals(chatList1.getId())){
                             mUsers.add(user);
+
                         }
                     }
                 }

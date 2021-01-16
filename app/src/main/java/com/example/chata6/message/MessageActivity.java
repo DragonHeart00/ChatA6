@@ -18,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.example.chata6.R;
 import com.example.chata6.controller.MessageAdapter;
 import com.example.chata6.model.Chat;
+import com.example.chata6.model.ChatList;
 import com.example.chata6.model.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -95,6 +96,7 @@ public class MessageActivity extends AppCompatActivity {
                 String msg = text_send.getText().toString();
                 if (!msg.equals("")){
                     sendMessage(firebaseUser.getUid(), userId, msg);
+
                 }else {
                     Toast.makeText(MessageActivity.this,"You can't send empty message", Toast.LENGTH_SHORT).show();
                 }
@@ -166,6 +168,7 @@ public class MessageActivity extends AppCompatActivity {
 
         databaseReference.child("Chats").push().setValue(hashMap);
 
+
         intent = getIntent();
         final String userId = intent.getStringExtra("userid");
         final DatabaseReference chatRef = FirebaseDatabase
@@ -178,6 +181,7 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 chatRef.child("id").setValue(userId);
+
             }
 
             @Override
@@ -185,6 +189,7 @@ public class MessageActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     private void readMessage(String my_id, String user_id, String image_url){
